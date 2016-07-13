@@ -31,7 +31,7 @@
       }
 
       .hero-image {
-        width: 100%;
+        
         width: 500px;
         height: 100px;
         display: block;
@@ -83,36 +83,66 @@
        padding: 20px;
       }
 
-      $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+      @media (max-width: 700px) {
+    .column{
+    width: 100%;
+  }
+}
+
+      .night-life img {
+        width: 100%;
+        display: cover;
       }
+
+
+    .column-70 {
+      width: 70%;
+      float: left;
+      height: 500px;
+      display: block;
+   
     }
-  });
-});
 
+    .column-70 img {
+      width: 100%;
+    }
 
+    .column-30 {
+      width: 30%;
+      float: left;
+      height: 500px;
+      display: block;
+    }
 
-/* div {
-  width: 50%;
-}
+    .column-30 p {
+      
+    }
 
-.title-area {
-  color: red;
-}
+    .nightin {
+      margin:25px;
+      background-color: white;
 
-button:hover {
-  back-color: blue;
-}
+    }
 
-#about-me {
-  font-family: sans-serif;
-}
+    .nightin h2 {
+      text-align: center;
+    }
 
+    @media (max-width: 700px){
+
+      .column-70 {
+        width: 100%;
+      }
+
+    }
+
+      .container:before, .row:before {
+        display: table;
+        content: "";
+      }
+
+      .container:after, .row:after {
+        display: table;
+        content: "";
+        clear: both;
+      }
